@@ -1,0 +1,90 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background-color: #131316;
+    color: #fff;
+}
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 80vh;
+}
+
+section h1{
+    font-size: 50px;
+    padding: 20px;
+}
+section p{
+    font-size: 30px;
+}
+.sec{
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-70%);
+}
+.tcg{
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(70%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.pic{
+    display: flex;
+}
+.logo{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+.logo:nth-child(2){ transition-delay: 300ms;}
+.logo:nth-child(3){transition-delay: 600ms;}
+.logo:nth-child(4){transition-delay: 900ms;}
+
+.cg {
+    background-image: linear-gradient(to right, #ff0000, #0000ff);
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    animation: colorChange 5s infinite;
+}
+@keyframes colorChange {
+    0% { background: linear-gradient(to right, red, blue); }
+    25% { background: linear-gradient(to right, blue, green); }
+    50% { background: linear-gradient(to right, green, orange); }
+    70% { background: linear-gradient(to right, orange, red); }
+    100% { background: linear-gradient(to right, red, blue); }
+}
+.tc{
+    background-image: linear-gradient(to bottom right, red, #0000ff);
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent;
+}
+.tcg{
+    background-image: linear-gradient(to bottom right, red, #0000ff);
+    background-clip: text;
+    color: transparent;
+    animation: color 10s infinite;
+}
+@keyframes color {
+    0% { background-image: linear-gradient(to right, red, blue); }
+    10% { background-image: linear-gradient(to right, #FF0000, #FF6600); }
+    20% { background-image: linear-gradient(to right, #FF6600, #FFCC00); }
+    30% { background-image: linear-gradient(to right, #FFFF00, #66FF00); }
+    40% { background-image: linear-gradient(to right, #66FF00, #00FF66); }
+    50% { background-image: linear-gradient(to right, #00FF66, #00FFFF); }
+    60% { background-image: linear-gradient(to right, #00FFFF, #0066FF); }
+    70% { background-image: linear-gradient(to right, #0066FF, #6600FF); }
+    80% { background-image: linear-gradient(to right, #6600FF, #FF00FF); }
+    90% { background-image: linear-gradient(to right, #FF00FF, #FF0000); }
+    100% { background-image: linear-gradient(to right, red, blue); }
+}
